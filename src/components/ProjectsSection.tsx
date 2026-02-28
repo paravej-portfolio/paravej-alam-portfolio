@@ -36,9 +36,9 @@ const projects = [
     ],
     aiAngle: "Used Generative AI to speed up analysis and insight generation.",
     impact: [
-      { icon: Clock, text: "Reduced analysis time by ~40%" },
-      { icon: Zap, text: "Improved productivity significantly" },
-      { icon: TrendingUp, text: "Faster insights extraction" },
+      { icon: Clock, text: "Reduced analysis time by 30–40%" },
+      { icon: Zap, text: "Cut manual effort by ~50%" },
+      { icon: TrendingUp, text: "Processed 5,000+ data points automatically" },
     ],
     tools: ["Python", "Pandas", "NumPy", "AI Tools"],
     gradient: "from-accent/20 to-accent/5",
