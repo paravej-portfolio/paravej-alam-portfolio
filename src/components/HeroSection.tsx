@@ -40,9 +40,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 grid-pattern" />
 
       {/* Dramatic gradient blobs */}
-      <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.12] blur-[150px]" />
-      <div className="absolute bottom-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-accent/[0.12] blur-[130px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-cyan/[0.06] blur-[100px]" />
+      <div className="absolute top-1/4 -left-40 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-primary/[0.12] blur-[80px] md:blur-[150px] z-0" />
+      <div className="absolute bottom-1/4 -right-40 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full bg-accent/[0.12] blur-[70px] md:blur-[130px] z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-full bg-cyan/[0.06] blur-[50px] md:blur-[100px] z-0" />
 
       <div className="container mx-auto px-5 md:px-4 relative z-10 text-center flex flex-col items-center py-16 md:py-20">
         {/* Badge — top of hero */}
