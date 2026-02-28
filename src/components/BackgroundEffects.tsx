@@ -26,13 +26,13 @@ const neuralLines: [[number, number], [number, number]][] = [
 ];
 
 const BackgroundEffects = () => (
-  <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" style={{ zIndex: 0 }}>
+  <div className="absolute inset-x-0 top-0 h-[90vh] sm:h-[110vh] md:inset-0 md:h-auto pointer-events-none z-0 overflow-hidden" aria-hidden="true">
     {/* Subtle grid pattern */}
-    <div className="absolute inset-0 grid-pattern opacity-40" />
+    <div className="absolute inset-0 grid-pattern opacity-30" />
 
     {/* Vignette overlay */}
     <div className="absolute inset-0" style={{
-      background: "radial-gradient(ellipse at center, transparent 40%, hsl(var(--background)) 100%)"
+      background: "radial-gradient(ellipse at center, transparent 45%, hsl(var(--background)) 100%)"
     }} />
 
     {/* LAYER 1: Neural Network — hidden on mobile for performance */}
@@ -116,11 +116,11 @@ const BackgroundEffects = () => (
       </svg>
     </div>
 
-    {/* Gradient orbs — smaller on mobile */}
-    <div className="absolute top-[10%] left-[15%] w-[250px] md:w-[500px] h-[250px] md:h-[500px] rounded-full bg-primary/[0.07] blur-[80px] md:blur-[120px] animate-float-slow" />
-    <div className="absolute top-[50%] right-[10%] w-[200px] md:w-[400px] h-[200px] md:h-[400px] rounded-full bg-accent/[0.06] blur-[80px] md:blur-[100px] animate-float-slower" />
-    <div className="absolute bottom-[10%] left-[30%] w-[180px] md:w-[350px] h-[180px] md:h-[350px] rounded-full bg-cyan/[0.04] blur-[60px] md:blur-[100px] animate-float-slow" style={{ animationDelay: "2s" }} />
-    <div className="absolute top-[30%] right-[40%] w-[150px] md:w-[250px] h-[150px] md:h-[250px] rounded-full bg-primary/[0.04] blur-[60px] md:blur-[80px] animate-float-slower" style={{ animationDelay: "4s" }} />
+    {/* Gradient orbs — lightweight on mobile */}
+    <div className="absolute top-[10%] left-[15%] w-[180px] md:w-[500px] h-[180px] md:h-[500px] rounded-full bg-primary/[0.07] blur-[36px] md:blur-[80px] animate-float-slow" />
+    <div className="absolute top-[50%] right-[10%] w-[160px] md:w-[400px] h-[160px] md:h-[400px] rounded-full bg-accent/[0.06] blur-[32px] md:blur-[72px] animate-float-slower" />
+    <div className="absolute bottom-[10%] left-[30%] w-[140px] md:w-[350px] h-[140px] md:h-[350px] rounded-full bg-cyan/[0.04] blur-[28px] md:blur-[68px] animate-float-slow" style={{ animationDelay: "2s" }} />
+    <div className="absolute top-[30%] right-[40%] w-[120px] md:w-[250px] h-[120px] md:h-[250px] rounded-full bg-primary/[0.04] blur-[24px] md:blur-[60px] animate-float-slower" style={{ animationDelay: "4s" }} />
   </div>
 );
 
