@@ -50,7 +50,7 @@ const HeroSection = () => {
         <div className="w-full max-w-[900px]">
           {/* Open to opportunities badge */}
           <div className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 mb-6 text-xs sm:text-sm text-muted-foreground border border-primary/20 badge-glow glass-card">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[hsl(142,69%,58%)] animate-pulse" />
             Open to opportunities
           </div>
 
