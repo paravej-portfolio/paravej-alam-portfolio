@@ -12,7 +12,7 @@ const useCases = [
 ];
 
 const AIUseCasesSection = () => (
-  <section id="ai-use-cases" className="py-20 md:py-28 bg-gradient-hero">
+  <section id="ai-use-cases" className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <AnimatedSection>
         <SectionHeading title="How I Use AI in Data Analytics" subtitle="Leveraging AI to work smarter, not harder" />
@@ -21,8 +21,8 @@ const AIUseCasesSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-12">
         {useCases.map((uc, i) => (
           <AnimatedSection key={i} delay={i * 100}>
-            <div className="glass rounded-xl p-5 flex items-start gap-4 hover:scale-[1.02] transition-transform duration-300">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+            <div className="glass rounded-xl p-5 flex items-start gap-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                 <uc.icon className="h-5 w-5 text-primary" />
               </div>
               <p className="text-sm text-foreground/90 leading-relaxed">{uc.label}</p>
@@ -33,7 +33,7 @@ const AIUseCasesSection = () => (
 
       {/* Real example callout */}
       <AnimatedSection delay={600}>
-        <div className="max-w-3xl mx-auto glass rounded-2xl p-8 glow-primary mb-10">
+        <div className="max-w-3xl mx-auto glass rounded-2xl p-8 gradient-border glow-primary mb-10">
           <div className="flex items-start gap-4">
             <Quote className="h-8 w-8 text-primary shrink-0 mt-1" />
             <div>

@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => (
-  <section id="contact" className="py-20 md:py-28 bg-gradient-hero">
+  <section id="contact" className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <AnimatedSection>
         <SectionHeading title="Let's Connect" subtitle="I'm actively seeking opportunities in Data Analytics & AI" />
@@ -15,7 +15,7 @@ const ContactSection = () => (
           <div className="space-y-4 mb-8">
             <a
               href="mailto:parvejalamsiddiqui1436@gmail.com"
-              className="flex items-center gap-3 glass rounded-xl p-4 hover:scale-[1.02] transition-transform duration-300"
+              className="flex items-center gap-3 glass rounded-xl p-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
             >
               <Mail className="h-5 w-5 text-primary" />
               <span className="text-sm text-foreground">parvejalamsiddiqui1436@gmail.com</span>
@@ -26,7 +26,7 @@ const ContactSection = () => (
               href="https://www.linkedin.com/in/paravejaalam"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 glass rounded-xl p-4 hover:scale-[1.02] transition-transform duration-300"
+              className="flex items-center gap-3 glass rounded-xl p-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
             >
               <Linkedin className="h-5 w-5 text-primary" />
               <span className="text-sm text-foreground">LinkedIn Profile</span>
@@ -37,7 +37,7 @@ const ContactSection = () => (
               href="https://github.com/Paravejalam/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 glass rounded-xl p-4 hover:scale-[1.02] transition-transform duration-300"
+              className="flex items-center gap-3 glass rounded-xl p-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
             >
               <Github className="h-5 w-5 text-primary" />
               <span className="text-sm text-foreground">GitHub Projects</span>
@@ -47,7 +47,7 @@ const ContactSection = () => (
             <a
               href="/resume.pdf"
               download
-              className="flex items-center gap-3 glass rounded-xl p-4 hover:scale-[1.02] transition-transform duration-300"
+              className="flex items-center gap-3 glass rounded-xl p-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
             >
               <Download className="h-5 w-5 text-primary" />
               <span className="text-sm text-foreground">Download Resume (PDF)</span>
@@ -55,7 +55,7 @@ const ContactSection = () => (
             </a>
           </div>
 
-          <Button size="lg" className="bg-gradient-accent text-primary-foreground glow-primary" asChild>
+          <Button size="lg" className="bg-gradient-accent text-primary-foreground animate-pulse-glow" asChild>
             <a href="mailto:parvejalamsiddiqui1436@gmail.com">
               <Mail className="h-5 w-5" />
               Get in Touch
@@ -65,7 +65,8 @@ const ContactSection = () => (
       </AnimatedSection>
 
       {/* Footer */}
-      <div className="mt-20 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+      <div className="mt-20 pt-8 text-center text-sm text-muted-foreground">
+        <div className="gradient-divider mb-8" />
         <p>© 2026 Paravej Alam. Built with passion for data & AI.</p>
       </div>
     </div>
