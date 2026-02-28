@@ -49,6 +49,7 @@ export default {
         },
         glow: "hsl(var(--glow))",
         "glow-secondary": "hsl(var(--glow-secondary))",
+        cyan: "hsl(var(--cyan))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -94,9 +95,23 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0) scale(1)" },
+          "50%": { transform: "translateY(-20px) scale(1.05)" },
+        },
+        "float-slower": {
+          "0%, 100%": { transform: "translateY(0) translateX(0)" },
+          "33%": { transform: "translateY(-15px) translateX(10px)" },
+          "66%": { transform: "translateY(5px) translateX(-10px)" },
+        },
         "pulse-glow": {
           "0%, 100%": { boxShadow: "0 0 20px -5px hsl(var(--primary) / 0.3)" },
-          "50%": { boxShadow: "0 0 40px -5px hsl(var(--primary) / 0.5)" },
+          "50%": { boxShadow: "0 0 50px -5px hsl(var(--primary) / 0.6)" },
+        },
+        "gradient-shift": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
         },
         typewriter: {
           "0%": { width: "0" },
@@ -105,6 +120,10 @@ export default {
         blink: {
           "0%, 100%": { borderColor: "hsl(var(--primary))" },
           "50%": { borderColor: "transparent" },
+        },
+        "orb-rotate": {
+          "0%": { transform: "rotate(0deg) translateX(100px) rotate(0deg)" },
+          "100%": { transform: "rotate(360deg) translateX(100px) rotate(-360deg)" },
         },
       },
       animation: {
@@ -115,8 +134,12 @@ export default {
         "slide-in-left": "slide-in-left 0.6s ease-out forwards",
         "slide-in-right": "slide-in-right 0.6s ease-out forwards",
         float: "float 3s ease-in-out infinite",
+        "float-slow": "float-slow 6s ease-in-out infinite",
+        "float-slower": "float-slower 8s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 4s ease-in-out infinite",
         blink: "blink 1s step-end infinite",
+        "orb-rotate": "orb-rotate 20s linear infinite",
       },
     },
   },
