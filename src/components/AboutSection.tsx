@@ -45,7 +45,7 @@ const AboutSection = () => (
               </div>
               <div className="pb-8">
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{step.desc}</p>
               </div>
             </div>
           </AnimatedSection>

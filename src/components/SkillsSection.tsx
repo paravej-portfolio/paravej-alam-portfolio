@@ -105,7 +105,7 @@ const SkillsSection = () => (
           <SectionHeading title="Skills & Tools" subtitle="My technical toolkit — hover to explore" />
         </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {categories.map((cat, i) => (
             <AnimatedSection key={i} delay={i * 150}>
               <div className="glass rounded-2xl p-6 gradient-border hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group">
