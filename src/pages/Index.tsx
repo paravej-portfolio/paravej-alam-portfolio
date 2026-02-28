@@ -18,11 +18,16 @@ const Index = () => {
   const backgroundDisabled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("bg") === "off";
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-background text-foreground noise-overlay">
+    <div className="relative isolate min-h-screen w-full overflow-x-hidden bg-background text-foreground noise-overlay">
       <ScrollProgress />
-      {!backgroundDisabled && <BackgroundEffects />}
 
-      <div className="relative z-10">
+      {!backgroundDisabled && (
+        <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
+          <BackgroundEffects />
+        </div>
+      )}
+
+      <div className="relative z-10 w-full">
         <Navbar />
         <HeroSection />
         <SectionDivider />
