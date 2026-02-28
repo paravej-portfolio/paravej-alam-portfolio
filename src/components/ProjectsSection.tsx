@@ -17,9 +17,9 @@ const projects = [
     ],
     aiAngle: "Used AI tools to improve insights and dashboard storytelling.",
     impact: [
-      { icon: TrendingUp, text: "Identified top-performing products" },
+      { icon: TrendingUp, text: "Identified top 3 revenue-driving factors" },
       { icon: Layers, text: "Analyzed 10,000+ sales records" },
-      { icon: Clock, text: "Enabled faster decision-making" },
+      { icon: Clock, text: "Improved reporting efficiency by ~35%" },
     ],
     tools: ["Power BI", "DAX", "Power Query", "AI Tools"],
     gradient: "from-primary/20 to-primary/5",
