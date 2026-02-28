@@ -61,7 +61,7 @@ const HeroSection = () => {
         </div>
 
         {/* Subheading */}
-        <p className="text-base sm:text-xl md:text-2xl text-foreground/70 mb-3 max-w-3xl leading-relaxed" style={{ textShadow: "0 0 30px hsl(var(--primary) / 0.15)" }}>
+        <p className="text-base sm:text-xl md:text-2xl text-foreground/70 mb-3 max-w-[90vw] md:max-w-3xl leading-relaxed" style={{ textShadow: "0 0 30px hsl(var(--primary) / 0.15)" }}>
           From Raw Data to Intelligent Decisions — Powered by Analytics & AI
         </p>
 
