@@ -9,9 +9,9 @@ const WhyMeSection = () => (
           <Sparkles className="h-8 w-8 text-primary mx-auto mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Me?</h2>
           <p className="text-lg text-foreground/90 leading-relaxed">
-            I combine <span className="text-primary font-semibold">analytics</span> +{" "}
-            <span className="text-accent font-semibold">AI</span> to deliver faster insights,
-            reduce manual effort, and solve real business problems using data-driven approaches.
+            I combine <span className="text-primary font-semibold">Analytics</span>,{" "}
+            <span className="text-accent font-semibold">AI</span>, and real-world problem solving
+            to deliver faster insights, reduce manual effort, and drive better business decisions.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
             <span className="glass rounded-full px-4 py-2">🎯 Business-focused</span>
