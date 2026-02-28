@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const ProjectsSection = () => (
-  <section id="projects" className="py-20 md:py-28">
+  <section id="projects" className="py-16 md:py-28">
     <div className="container mx-auto px-4">
       <AnimatedSection>
         <SectionHeading title="Featured Projects" subtitle="Data Analytics + AI in Action" />
