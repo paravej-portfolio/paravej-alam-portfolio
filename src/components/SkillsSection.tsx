@@ -11,7 +11,7 @@ import {
 
 interface Skill {
   name: string;
-  level: number; // 0-100
+  level: number;
   tip: string;
 }
 
@@ -99,7 +99,7 @@ const SkillBadge = ({ skill }: { skill: Skill }) => (
 
 const SkillsSection = () => (
   <TooltipProvider delayDuration={200}>
-    <section id="skills" className="py-20 md:py-28 bg-gradient-hero">
+    <section id="skills" className="py-20 md:py-28">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <SectionHeading title="Skills & Tools" subtitle="My technical toolkit — hover to explore" />
@@ -108,7 +108,7 @@ const SkillsSection = () => (
         <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {categories.map((cat, i) => (
             <AnimatedSection key={i} delay={i * 150}>
-              <div className="glass rounded-2xl p-6 hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group">
+              <div className="glass rounded-2xl p-6 gradient-border hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group">
                 <div className="flex items-center gap-3 mb-5">
                   <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${cat.color} flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:shadow-primary/20 transition-shadow`}>
                     <cat.icon className="h-5 w-5 text-primary-foreground" />

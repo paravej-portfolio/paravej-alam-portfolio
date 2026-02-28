@@ -10,20 +10,43 @@ import CertificationsSection from "@/components/CertificationsSection";
 import WhyMeSection from "@/components/WhyMeSection";
 import ExtrasSection from "@/components/ExtrasSection";
 import ContactSection from "@/components/ContactSection";
+import BackgroundEffects from "@/components/BackgroundEffects";
+import ScrollProgress from "@/components/ScrollProgress";
+import SectionDivider from "@/components/SectionDivider";
 
 const Index = () => (
-  <div className="min-h-screen bg-background text-foreground">
+  <div className="min-h-screen bg-background text-foreground noise-overlay">
+    <ScrollProgress />
+    <BackgroundEffects />
     <Navbar />
     <HeroSection />
+    <SectionDivider />
     <AboutSection />
-    <EducationSection />
+    <SectionDivider />
+    <div className="section-alt">
+      <EducationSection />
+    </div>
+    <SectionDivider />
     <PhilosophySection />
-    <AIUseCasesSection />
+    <SectionDivider />
+    <div className="section-alt">
+      <AIUseCasesSection />
+    </div>
+    <SectionDivider />
     <ProjectsSection />
-    <SkillsSection />
+    <SectionDivider />
+    <div className="section-alt">
+      <SkillsSection />
+    </div>
+    <SectionDivider />
     <CertificationsSection />
-    <WhyMeSection />
+    <SectionDivider />
+    <div className="section-alt">
+      <WhyMeSection />
+    </div>
+    <SectionDivider />
     <ExtrasSection />
+    <SectionDivider />
     <ContactSection />
   </div>
 );

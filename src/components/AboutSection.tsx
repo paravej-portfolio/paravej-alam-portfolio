@@ -33,14 +33,14 @@ const AboutSection = () => (
       <div className="max-w-4xl mx-auto">
         {steps.map((step, i) => (
           <AnimatedSection key={i} delay={i * 150}>
-            <div className="flex gap-6 mb-10 last:mb-0">
+            <div className="flex gap-6 mb-10 last:mb-0 group">
               {/* Timeline line */}
               <div className="flex flex-col items-center">
-                <div className={`w-12 h-12 rounded-xl glass flex items-center justify-center ${step.color} shrink-0`}>
+                <div className={`w-12 h-12 rounded-xl glass gradient-border flex items-center justify-center ${step.color} shrink-0 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-300`}>
                   <step.icon className="h-6 w-6" />
                 </div>
                 {i < steps.length - 1 && (
-                  <div className="w-px flex-1 bg-gradient-to-b from-border to-transparent mt-2" />
+                  <div className="w-px flex-1 bg-gradient-to-b from-primary/30 to-transparent mt-2" />
                 )}
               </div>
               <div className="pb-8">

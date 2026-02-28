@@ -8,21 +8,19 @@ const ProjectsSection = () => (
   <section id="projects" className="py-20 md:py-28">
     <div className="container mx-auto px-4">
       <AnimatedSection>
-        <SectionHeading
-          title="Featured Projects"
-          subtitle="Data Analytics + AI in Action"
-        />
+        <SectionHeading title="Featured Projects" subtitle="Data Analytics + AI in Action" />
       </AnimatedSection>
 
       <div className="max-w-4xl mx-auto space-y-10">
         {/* Project 1 — Placement Predictor */}
         <AnimatedSection>
-          <div className="glass rounded-2xl overflow-hidden hover:scale-[1.01] transition-transform duration-300">
-            <div className="h-44 bg-gradient-to-br from-accent/20 to-primary/10 flex items-center justify-center relative overflow-hidden">
+          <div className="glass rounded-2xl overflow-hidden gradient-border hover:scale-[1.01] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
+            <div className="h-44 bg-gradient-to-br from-accent/[0.15] to-primary/[0.05] flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 grid-pattern opacity-30" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--accent)/0.15),transparent_70%)]" />
               <Brain className="h-16 w-16 text-accent/40" />
               <div className="absolute bottom-3 right-3">
-                <Badge variant="secondary" className="glass text-xs">AI + ML Project</Badge>
+                <Badge variant="secondary" className="glass text-xs gradient-border">AI + ML Project</Badge>
               </div>
             </div>
 
@@ -54,7 +52,7 @@ const ProjectsSection = () => (
                 </ul>
               </div>
 
-              <div className="glass rounded-lg p-4 border-accent/20">
+              <div className="glass rounded-lg p-4 gradient-border">
                 <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-2">🤖 AI / ML Angle</p>
                 <ul className="text-sm text-foreground/80 space-y-1">
                   {[
@@ -86,7 +84,7 @@ const ProjectsSection = () => (
                 </div>
               </div>
 
-              <div className="glass rounded-lg p-4 border-primary/20">
+              <div className="glass rounded-lg p-4 gradient-border">
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">💼 Business Value</p>
                 <ul className="text-sm text-foreground/80 space-y-1">
                   {[
@@ -103,17 +101,17 @@ const ProjectsSection = () => (
 
               <div className="flex flex-wrap gap-2">
                 {["Python", "Pandas", "NumPy", "Scikit-learn", "SQL", "Power BI", "Excel", "Streamlit", "SHAP"].map((tool) => (
-                  <Badge key={tool} variant="outline" className="text-xs border-primary/30 text-primary">{tool}</Badge>
+                  <Badge key={tool} variant="outline" className="text-xs border-primary/30 text-primary hover:bg-primary/10 transition-colors">{tool}</Badge>
                 ))}
               </div>
 
               <div className="flex flex-wrap gap-3 pt-2">
-                <Button asChild size="sm" className="bg-gradient-accent text-primary-foreground">
+                <Button asChild size="sm" className="bg-gradient-accent text-primary-foreground animate-pulse-glow">
                   <a href="https://college-placement-predictor.streamlit.app/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" /> Live App
                   </a>
                 </Button>
-                <Button asChild size="sm" variant="outline">
+                <Button asChild size="sm" variant="outline" className="border-primary/30 hover:bg-primary/10">
                   <a href="https://github.com/Paravejalam/College-Placement-Predictor" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" /> GitHub
                   </a>
@@ -125,12 +123,13 @@ const ProjectsSection = () => (
 
         {/* Project 2 — Sales Dashboard */}
         <AnimatedSection delay={200}>
-          <div className="glass rounded-2xl overflow-hidden hover:scale-[1.01] transition-transform duration-300">
-            <div className="h-44 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center relative overflow-hidden">
+          <div className="glass rounded-2xl overflow-hidden gradient-border hover:scale-[1.01] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
+            <div className="h-44 bg-gradient-to-br from-primary/[0.15] to-primary/[0.03] flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 grid-pattern opacity-30" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--primary)/0.15),transparent_70%)]" />
               <BarChart3 className="h-16 w-16 text-primary/40" />
               <div className="absolute bottom-3 right-3">
-                <Badge variant="secondary" className="glass text-xs">Power BI + Deployment</Badge>
+                <Badge variant="secondary" className="glass text-xs gradient-border">Power BI + Deployment</Badge>
               </div>
             </div>
 
@@ -161,7 +160,7 @@ const ProjectsSection = () => (
                 </ul>
               </div>
 
-              <div className="glass rounded-lg p-4 border-primary/20">
+              <div className="glass rounded-lg p-4 gradient-border">
                 <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-2">🤖 AI Angle</p>
                 <ul className="text-sm text-foreground/80 space-y-1">
                   {[
@@ -192,7 +191,7 @@ const ProjectsSection = () => (
                 </div>
               </div>
 
-              <div className="glass rounded-lg p-4 border-primary/20">
+              <div className="glass rounded-lg p-4 gradient-border">
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">💼 Business Value</p>
                 <ul className="text-sm text-foreground/80 space-y-1">
                   {[
@@ -226,17 +225,17 @@ const ProjectsSection = () => (
 
               <div className="flex flex-wrap gap-2">
                 {["Power BI", "DAX", "Power Query", "Data Modeling", "Vercel", "AI Tools"].map((tool) => (
-                  <Badge key={tool} variant="outline" className="text-xs border-primary/30 text-primary">{tool}</Badge>
+                  <Badge key={tool} variant="outline" className="text-xs border-primary/30 text-primary hover:bg-primary/10 transition-colors">{tool}</Badge>
                 ))}
               </div>
 
               <div className="flex flex-wrap gap-3 pt-2">
-                <Button asChild size="sm" className="bg-gradient-accent text-primary-foreground">
+                <Button asChild size="sm" className="bg-gradient-accent text-primary-foreground animate-pulse-glow">
                   <a href="https://v0-sales-performance-dashboard-ochre.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" /> Live Dashboard
                   </a>
                 </Button>
-                <Button asChild size="sm" variant="outline">
+                <Button asChild size="sm" variant="outline" className="border-primary/30 hover:bg-primary/10">
                   <a href="https://github.com/Paravejalam/v0-sales-performance-dashboard" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" /> GitHub
                   </a>
@@ -249,11 +248,11 @@ const ProjectsSection = () => (
         {/* Learning & Certifications */}
         <AnimatedSection delay={400}>
           <div className="space-y-6">
-            <h3 className="text-xl md:text-2xl font-bold text-center text-gradient">Learning & Certifications</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-center text-gradient-animated">Learning & Certifications</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="glass rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300">
+              <div className="glass rounded-2xl p-6 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Rocket className="h-5 w-5 text-primary" />
                   </div>
                   <h4 className="font-semibold">AI, Data Analytics & Power BI</h4>
@@ -273,9 +272,9 @@ const ProjectsSection = () => (
                 </ul>
               </div>
 
-              <div className="glass rounded-2xl p-6 hover:scale-[1.02] transition-transform duration-300">
+              <div className="glass rounded-2xl p-6 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 group">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                     <Cloud className="h-5 w-5 text-accent" />
                   </div>
                   <h4 className="font-semibold">AWS DevSecOps (NIELIT)</h4>
@@ -295,7 +294,7 @@ const ProjectsSection = () => (
               </div>
             </div>
 
-            <div className="glass rounded-2xl p-6 md:p-8 bg-gradient-to-br from-primary/10 to-accent/10 text-center">
+            <div className="glass rounded-2xl p-6 md:p-8 gradient-border bg-gradient-to-br from-primary/[0.05] to-accent/[0.05] text-center">
               <Award className="h-8 w-8 text-primary mx-auto mb-3" />
               <h4 className="text-lg font-bold mb-4">🎯 What Makes Me Different</h4>
               <div className="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto text-left">

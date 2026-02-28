@@ -36,23 +36,29 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute inset-0 bg-gradient-hero" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-accent/10 blur-3xl" />
+      {/* Grid pattern */}
+      <div className="absolute inset-0 grid-pattern" />
+
+      {/* Dramatic gradient blobs */}
+      <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.12] blur-[150px]" />
+      <div className="absolute bottom-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-accent/[0.12] blur-[130px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-cyan/[0.06] blur-[100px]" />
 
       <div className="container mx-auto px-4 relative z-10 text-center py-20">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 text-sm text-muted-foreground">
+        <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 text-sm text-muted-foreground gradient-border">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           Open to opportunities
         </div>
 
-        {/* Name */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-          Hi, I'm{" "}
-          <span className="text-gradient">Paravej Alam</span>
-        </h1>
+        {/* Spotlight glow behind name */}
+        <div className="relative inline-block">
+          <div className="absolute inset-0 -inset-x-20 -inset-y-10 bg-primary/[0.08] blur-[80px] rounded-full" />
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 relative">
+            Hi, I'm{" "}
+            <span className="text-gradient-animated">Paravej Alam</span>
+          </h1>
+        </div>
 
         {/* Tagline */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-2 max-w-3xl mx-auto">
@@ -75,23 +81,23 @@ const HeroSection = () => {
 
         {/* Info badges */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm text-muted-foreground">
-          <span className="flex items-center gap-1.5">
+          <span className="flex items-center gap-1.5 glass rounded-full px-3 py-1.5 gradient-border">
             <MapPin className="h-4 w-4 text-primary" /> Gorakhpur, UP, India
           </span>
-          <span className="flex items-center gap-1.5">
+          <span className="flex items-center gap-1.5 glass rounded-full px-3 py-1.5 gradient-border">
             <GraduationCap className="h-4 w-4 text-primary" /> MCA, MMMUT (2024–2026)
           </span>
         </div>
 
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-          <Button size="lg" className="bg-gradient-accent text-primary-foreground glow-primary" asChild>
+          <Button size="lg" className="bg-gradient-accent text-primary-foreground animate-pulse-glow" asChild>
             <a href="#projects">
               <FolderOpen className="h-5 w-5" />
               View Projects
             </a>
           </Button>
-          <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10" asChild>
+          <Button size="lg" variant="outline" className="border-primary/40 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300" asChild>
             <a href="/resume.pdf" download>
               <Download className="h-5 w-5" />
               Download Resume
