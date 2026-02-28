@@ -99,7 +99,7 @@ const SkillBadge = ({ skill }: { skill: Skill }) => (
 
 const SkillsSection = () => (
   <TooltipProvider delayDuration={200}>
-    <section id="skills" className="py-20 md:py-28">
+    <section id="skills" className="py-16 md:py-28">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <SectionHeading title="Skills & Tools" subtitle="My technical toolkit — hover to explore" />
