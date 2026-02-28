@@ -40,11 +40,11 @@ const HeroSection = () => {
       <div className="absolute inset-0 grid-pattern" />
 
       {/* Dramatic gradient blobs */}
-      <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.12] blur-[150px]" />
-      <div className="absolute bottom-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-accent/[0.12] blur-[130px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-cyan/[0.06] blur-[100px]" />
+      <div className="absolute top-1/4 -left-40 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-primary/[0.12] blur-[80px] md:blur-[150px] z-0" />
+      <div className="absolute bottom-1/4 -right-40 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full bg-accent/[0.12] blur-[70px] md:blur-[130px] z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-full bg-cyan/[0.06] blur-[50px] md:blur-[100px] z-0" />
 
-      <div className="container mx-auto px-5 md:px-4 relative z-10 text-center flex flex-col items-center py-16 md:py-20">
+      <div className="container mx-auto px-5 md:px-4 relative z-20 text-center flex flex-col items-center py-16 md:py-20">
         {/* Badge — top of hero */}
         <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mt-4 mb-4 text-xs sm:text-sm text-muted-foreground gradient-border">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -53,20 +53,20 @@ const HeroSection = () => {
 
         {/* Main Heading with spotlight glow */}
         <div className="relative inline-block mb-3">
-          <div className="absolute inset-0 -inset-x-10 md:-inset-x-20 -inset-y-5 md:-inset-y-10 bg-primary/[0.08] blur-[60px] md:blur-[80px] rounded-full" />
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold relative leading-tight">
+          <div className="absolute -inset-x-4 -inset-y-2 md:-inset-x-20 md:-inset-y-10 bg-primary/[0.08] blur-[30px] md:blur-[80px] rounded-full" />
+          <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold relative leading-tight max-w-[90vw] md:max-w-none">
             Hi, I'm{" "}
             <span className="text-gradient-animated">Paravej Alam</span>
           </h1>
         </div>
 
         {/* Subheading */}
-        <p className="text-base sm:text-xl md:text-2xl text-foreground/70 mb-3 max-w-3xl leading-relaxed" style={{ textShadow: "0 0 30px hsl(var(--primary) / 0.15)" }}>
+        <p className="text-base sm:text-xl md:text-2xl text-foreground/70 mb-3 max-w-[90vw] md:max-w-3xl leading-relaxed" style={{ textShadow: "0 0 30px hsl(var(--primary) / 0.15)" }}>
           From Raw Data to Intelligent Decisions — Powered by Analytics & AI
         </p>
 
         {/* Typing effect */}
-        <div className="min-h-[2.5rem] md:h-10 flex items-center justify-center mb-3 px-2">
+        <div className="min-h-[2.5rem] md:h-10 flex items-center justify-center mb-3 px-2 max-w-[90vw] md:max-w-none">
           <p className="text-sm sm:text-lg md:text-xl text-foreground/80 leading-relaxed">
             Transforming business data into actionable insights using{" "}
             <span className="text-primary font-semibold">{text}</span>
