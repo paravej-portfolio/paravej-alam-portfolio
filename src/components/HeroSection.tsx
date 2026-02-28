@@ -66,7 +66,7 @@ const HeroSection = () => {
         </p>
 
         {/* Typing effect */}
-        <div className="min-h-[2.5rem] md:h-10 flex items-center justify-center mb-3 px-2">
+        <div className="min-h-[2.5rem] md:h-10 flex items-center justify-center mb-3 px-2 max-w-[90vw] md:max-w-none">
           <p className="text-sm sm:text-lg md:text-xl text-foreground/80 leading-relaxed">
             Transforming business data into actionable insights using{" "}
             <span className="text-primary font-semibold">{text}</span>
