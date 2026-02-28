@@ -29,15 +29,18 @@ const Navbar = () => {
         scrolled ? "glass-strong shadow-lg" : "bg-transparent"
       )}
     >
+      {/* Gradient bottom border when scrolled */}
+      {scrolled && <div className="absolute bottom-0 left-0 right-0 gradient-divider" />}
+
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="text-xl font-bold text-gradient">PA</a>
+        <a href="#" className="text-xl font-bold text-gradient-animated">PA</a>
 
         <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               {l.label}
             </a>
@@ -54,13 +57,13 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden glass-strong border-t border-border">
+        <div className="md:hidden glass-strong border-t border-border/30">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block px-6 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+              className="block px-6 py-3 text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors"
             >
               {l.label}
             </a>
