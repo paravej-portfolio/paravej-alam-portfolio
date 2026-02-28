@@ -26,7 +26,7 @@ const neuralLines: [[number, number], [number, number]][] = [
 ];
 
 const BackgroundEffects = () => (
-  <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+  <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" style={{ zIndex: 0 }}>
     {/* Subtle grid pattern */}
     <div className="absolute inset-0 grid-pattern opacity-40" />
 

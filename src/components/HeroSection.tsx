@@ -35,7 +35,7 @@ const HeroSection = () => {
   }, [text, typing, roleIndex]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-x-hidden">
       {/* Grid pattern */}
       <div className="absolute inset-0 grid-pattern" />
 
