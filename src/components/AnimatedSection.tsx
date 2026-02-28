@@ -12,6 +12,16 @@ const AnimatedSection = ({ children, className, delay = 0 }: AnimatedSectionProp
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const mobileQuery = window.matchMedia("(max-width: 767px)");
+      const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      if (mobileQuery.matches || reducedMotionQuery.matches) {
+        setIsVisible(true);
+        return;
+      }
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
