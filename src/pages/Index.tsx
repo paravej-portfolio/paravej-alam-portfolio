@@ -15,15 +15,14 @@ import ScrollProgress from "@/components/ScrollProgress";
 import SectionDivider from "@/components/SectionDivider";
 
 const Index = () => {
-  const backgroundDisabled = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("bg") === "off";
-  const isDesktopViewport = typeof window === "undefined" || window.matchMedia("(min-width: 768px)").matches;
-  const showBackgroundEffects = !backgroundDisabled && isDesktopViewport;
+  const isDesktop = typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches;
 
   return (
-    <div className="relative isolate min-h-screen w-full overflow-x-hidden bg-background text-foreground noise-overlay">
+    <div className="relative isolate min-h-screen w-full bg-background text-foreground noise-overlay">
       <ScrollProgress />
 
-      {showBackgroundEffects && (
+      {/* Background effects — desktop only */}
+      {isDesktop && (
         <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
           <BackgroundEffects />
         </div>

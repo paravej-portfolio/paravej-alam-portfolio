@@ -3,6 +3,13 @@ import AnimatedSection from "./AnimatedSection";
 import SectionHeading from "./SectionHeading";
 import { Button } from "@/components/ui/button";
 
+const contactLinks = [
+  { icon: Mail, label: "parvejalamsiddiqui1436@gmail.com", href: "mailto:parvejalamsiddiqui1436@gmail.com" },
+  { icon: Linkedin, label: "LinkedIn Profile", href: "https://www.linkedin.com/in/paravejaalam", external: true },
+  { icon: Github, label: "GitHub Projects", href: "https://github.com/Paravejalam/", external: true },
+  { icon: Download, label: "Download Resume (PDF)", href: "/resume.pdf", download: true },
+];
+
 const ContactSection = () => (
   <section id="contact" className="py-16 md:py-28">
     <div className="container mx-auto px-4">
@@ -13,49 +20,22 @@ const ContactSection = () => (
       <AnimatedSection delay={200}>
         <div className="max-w-md mx-auto text-center">
           <div className="space-y-4 mb-8">
-            <a
-              href="mailto:parvejalamsiddiqui1436@gmail.com"
-              className="flex items-center gap-3 glass rounded-xl p-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-            >
-              <Mail className="h-5 w-5 text-primary" />
-              <span className="text-sm text-foreground">parvejalamsiddiqui1436@gmail.com</span>
-              <ExternalLink className="h-4 w-4 text-muted-foreground ml-auto" />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/paravejaalam"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 glass rounded-xl p-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-            >
-              <Linkedin className="h-5 w-5 text-primary" />
-              <span className="text-sm text-foreground">LinkedIn Profile</span>
-              <ExternalLink className="h-4 w-4 text-muted-foreground ml-auto" />
-            </a>
-
-            <a
-              href="https://github.com/Paravejalam/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 glass rounded-xl p-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-            >
-              <Github className="h-5 w-5 text-primary" />
-              <span className="text-sm text-foreground">GitHub Projects</span>
-              <ExternalLink className="h-4 w-4 text-muted-foreground ml-auto" />
-            </a>
-
-            <a
-              href="/resume.pdf"
-              download
-              className="flex items-center gap-3 glass rounded-xl p-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-            >
-              <Download className="h-5 w-5 text-primary" />
-              <span className="text-sm text-foreground">Download Resume (PDF)</span>
-              <ExternalLink className="h-4 w-4 text-muted-foreground ml-auto" />
-            </a>
+            {contactLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                {...(link.download ? { download: true } : {})}
+                className="flex items-center gap-3 glass-card rounded-xl p-4 gradient-border card-hover"
+              >
+                <link.icon className="h-5 w-5 text-primary" />
+                <span className="text-sm text-foreground">{link.label}</span>
+                <ExternalLink className="h-4 w-4 text-muted-foreground ml-auto" />
+              </a>
+            ))}
           </div>
 
-          <Button size="lg" className="bg-gradient-accent text-primary-foreground animate-pulse-glow" asChild>
+          <Button size="lg" className="bg-gradient-accent text-primary-foreground btn-premium" asChild>
             <a href="mailto:parvejalamsiddiqui1436@gmail.com">
               <Mail className="h-5 w-5" />
               Get in Touch

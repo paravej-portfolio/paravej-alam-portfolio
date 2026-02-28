@@ -30,8 +30,8 @@ const ExtrasSection = () => (
       <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
         {items.map((item, i) => (
           <AnimatedSection key={i} delay={i * 150}>
-            <div className="glass rounded-2xl p-6 text-center gradient-border hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+            <div className="glass-card rounded-2xl p-6 text-center gradient-border card-hover group h-full">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
                 <item.icon className="h-7 w-7 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">{item.title}</h3>

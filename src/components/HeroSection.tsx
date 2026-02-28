@@ -35,41 +35,38 @@ const HeroSection = () => {
   }, [text, typing, roleIndex]);
 
   return (
-    <section className="relative min-h-[100svh] bg-gradient-to-b from-[#020617] via-[#0f172a] to-[#020617] md:bg-none">
+    <section className="relative min-h-[100svh] bg-gradient-to-b from-[hsl(222,60%,5%)] via-[hsl(222,50%,8%)] to-[hsl(222,60%,5%)] md:bg-none">
       {/* Desktop-only background effects */}
       <div className="hidden md:block absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
-        {/* Gradient orbs */}
-        <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.12] blur-[100px]" />
-        <div className="absolute bottom-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-accent/[0.12] blur-[100px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-[hsl(192_91%_36%/0.06)] blur-[80px]" />
-        {/* Grid pattern */}
+        <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] rounded-full bg-primary/[0.10] blur-[100px] animate-float-slow" />
+        <div className="absolute bottom-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-accent/[0.10] blur-[100px] animate-float-slower" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-cyan/[0.06] blur-[80px]" />
         <div className="absolute inset-0 grid-pattern opacity-30" />
-        {/* Vignette */}
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 45%, hsl(var(--background)) 100%)" }} />
       </div>
 
       {/* Content — always visible, clean flex layout */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-[100svh] px-4 py-16 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[100svh] px-4 py-16 md:py-24 text-center">
         <div className="w-full max-w-[900px]">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4 text-xs sm:text-sm text-muted-foreground border border-border md:glass md:gradient-border">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          {/* Open to opportunities badge */}
+          <div className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 mb-6 text-xs sm:text-sm text-muted-foreground border border-primary/20 badge-glow glass-card">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             Open to opportunities
           </div>
 
-          {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-3 leading-tight text-foreground break-words max-w-full">
+          {/* Main heading */}
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight text-foreground break-words max-w-full">
             Hi, I'm{" "}
             <span className="text-gradient-animated">Paravej Alam</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-base sm:text-xl md:text-2xl text-foreground/70 mb-3 leading-relaxed max-w-full">
+          <p className="text-base sm:text-lg md:text-2xl text-foreground/70 mb-4 leading-relaxed max-w-full">
             From Raw Data to Intelligent Decisions — Powered by Analytics & AI
           </p>
 
           {/* Typing effect */}
-          <div className="min-h-[2.5rem] flex items-center justify-center mb-3">
+          <div className="min-h-[2.5rem] flex items-center justify-center mb-4">
             <p className="text-sm sm:text-lg md:text-xl text-foreground/80 leading-relaxed break-words max-w-full">
               Transforming business data into actionable insights using{" "}
               <span className="text-primary font-semibold">{text}</span>
@@ -78,19 +75,24 @@ const HeroSection = () => {
           </div>
 
           {/* Description */}
-          <p className="text-muted-foreground text-sm sm:text-base mb-6 leading-relaxed">
+          <p className="text-muted-foreground text-sm sm:text-base mb-8 leading-relaxed max-w-2xl mx-auto">
             Built dashboards, analyzed datasets, and applied AI to accelerate insights.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8">
-            <Button size="lg" className="bg-gradient-accent text-primary-foreground animate-pulse-glow w-full sm:w-auto" asChild>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10">
+            <Button size="lg" className="bg-gradient-accent text-primary-foreground btn-premium animate-pulse-glow w-full sm:w-auto text-base px-8" asChild>
               <a href="#projects">
                 <FolderOpen className="h-5 w-5" />
                 View Projects
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/40 hover:bg-primary/10 hover:border-primary/60 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.4)] transition-all duration-300 w-full sm:w-auto" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              className="glass-card border-primary/30 hover:border-primary/60 btn-premium w-full sm:w-auto text-base px-8"
+              asChild
+            >
               <a href="/resume.pdf" download>
                 <Download className="h-5 w-5" />
                 Download Resume
@@ -99,17 +101,17 @@ const HeroSection = () => {
           </div>
 
           {/* Info badges */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1.5 rounded-full px-3 py-1.5 border border-border md:glass md:gradient-border">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 text-sm text-muted-foreground">
+            <span className="flex items-center gap-2 rounded-full px-4 py-2 glass-card gradient-border">
               <MapPin className="h-4 w-4 text-primary" /> Gorakhpur, UP, India
             </span>
-            <span className="flex items-center gap-1.5 rounded-full px-3 py-1.5 border border-border md:glass md:gradient-border">
+            <span className="flex items-center gap-2 rounded-full px-4 py-2 glass-card gradient-border">
               <GraduationCap className="h-4 w-4 text-primary" /> MCA, MMMUT (2024–2026)
             </span>
           </div>
 
           {/* Scroll indicator */}
-          <a href="#about" className="inline-block animate-float text-muted-foreground hover:text-primary transition-colors">
+          <a href="#about" className="inline-block animate-float text-muted-foreground hover:text-primary transition-colors duration-300">
             <ArrowDown className="h-6 w-6" />
           </a>
         </div>

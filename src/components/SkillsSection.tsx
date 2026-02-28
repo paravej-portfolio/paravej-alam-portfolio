@@ -72,18 +72,18 @@ const SkillBadge = ({ skill }: { skill: Skill }) => (
   <Tooltip>
     <TooltipTrigger asChild>
       <div className="group/skill cursor-default">
-        <div className="flex items-center justify-between mb-1">
+        <div className="flex items-center justify-between mb-1.5">
           <Badge
             variant="secondary"
             className="text-xs transition-all duration-300 group-hover/skill:scale-105 group-hover/skill:shadow-md group-hover/skill:shadow-primary/20 group-hover/skill:bg-primary/20 group-hover/skill:text-primary"
           >
             {skill.name}
           </Badge>
-          <span className="text-[10px] text-muted-foreground ml-2 opacity-0 group-hover/skill:opacity-100 transition-opacity">
+          <span className="text-[10px] text-muted-foreground ml-2 opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300">
             {skill.level}%
           </span>
         </div>
-        <div className="h-1 w-full rounded-full bg-secondary overflow-hidden">
+        <div className="h-1.5 w-full rounded-full bg-secondary/50 overflow-hidden">
           <div
             className="h-full rounded-full bg-gradient-to-r from-primary to-accent transition-all duration-700 ease-out"
             style={{ width: `${skill.level}%` }}
@@ -91,7 +91,7 @@ const SkillBadge = ({ skill }: { skill: Skill }) => (
         </div>
       </div>
     </TooltipTrigger>
-    <TooltipContent side="top" className="text-xs">
+    <TooltipContent side="top" className="text-xs glass-strong border-primary/20">
       {skill.tip}
     </TooltipContent>
   </Tooltip>
@@ -108,9 +108,9 @@ const SkillsSection = () => (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {categories.map((cat, i) => (
             <AnimatedSection key={i} delay={i * 150}>
-              <div className="glass rounded-2xl p-6 gradient-border hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group">
+              <div className="glass-card rounded-2xl p-6 gradient-border card-hover group h-full">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${cat.color} flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:shadow-primary/20 transition-shadow`}>
+                  <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${cat.color} flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:shadow-primary/20 transition-shadow duration-300`}>
                     <cat.icon className="h-5 w-5 text-primary-foreground" />
                   </div>
                   <h3 className="font-semibold">{cat.title}</h3>
