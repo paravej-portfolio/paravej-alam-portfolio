@@ -1,4 +1,4 @@
-import { Brain, BarChart3, ExternalLink, TrendingUp, Clock, Layers, Zap, Rocket, Award, Target, Sparkles, BookOpen, Cloud } from "lucide-react";
+import { Brain, BarChart3, ExternalLink, TrendingUp, Clock, Layers, Zap, Rocket, Award, Target, Sparkles, Cloud, Briefcase } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionHeading from "./SectionHeading";
 import { Badge } from "@/components/ui/badge";
@@ -31,21 +31,20 @@ const ProjectsSection = () => (
 
               <div>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">🔍 Problem</p>
-                <p className="text-sm text-muted-foreground">Students struggle to understand placement trends, evaluate their resume strength, and predict their chances of getting placed.</p>
+                <p className="text-sm text-muted-foreground">Students lack clarity on placement trends, resume strength, and job readiness.</p>
               </div>
 
               <div>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">⚙️ Approach</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   {[
-                    "Built an end-to-end analytics + ML system",
-                    "Processed student and resume data using Python (Pandas, NumPy)",
-                    "Implemented Machine Learning model (Logistic Regression) for placement prediction",
-                    "Used SHAP for model explainability",
+                    "Built end-to-end ML pipeline using Python (Pandas, NumPy, Scikit-learn)",
+                    "Implemented Logistic Regression model for placement prediction",
                     "Created ATS Resume Match Score system",
-                    "Built a What-If Simulator for skill improvement analysis",
+                    "Used SHAP for model explainability",
+                    "Built What-If Simulator for skill improvement",
                     "Developed dashboards using Excel & Power BI",
-                    "Deployed full solution using Streamlit",
+                    "Deployed using Streamlit",
                   ].map((a, j) => (
                     <li key={j} className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
@@ -59,9 +58,9 @@ const ProjectsSection = () => (
                 <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-2">🤖 AI / ML Angle</p>
                 <ul className="text-sm text-foreground/80 space-y-1">
                   {[
-                    "Machine Learning-based prediction system",
-                    "SHAP Explainability for transparent decision-making",
-                    "AI-assisted resume analysis & scoring",
+                    "Machine Learning prediction system",
+                    "SHAP explainability for transparent decision-making",
+                    "AI-assisted resume scoring",
                   ].map((a, j) => (
                     <li key={j} className="flex items-start gap-2">
                       <Sparkles className="h-3.5 w-3.5 text-accent mt-0.5 shrink-0" />
@@ -75,10 +74,9 @@ const ProjectsSection = () => (
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">📈 Impact</p>
                 <div className="space-y-2">
                   {[
-                    { icon: Layers, text: "Built a complete end-to-end pipeline (Data → ML → Dashboard → Deployment)" },
-                    { icon: Target, text: "Helps students understand placement probability and improvement areas" },
-                    { icon: TrendingUp, text: "Transforms raw data into actionable career insights" },
-                    { icon: Zap, text: "Demonstrates real-world application of AI in analytics" },
+                    { icon: Layers, text: "Built full pipeline (Data → ML → Dashboard → Deployment)" },
+                    { icon: Target, text: "Helps students understand placement probability" },
+                    { icon: TrendingUp, text: "Converts raw data into actionable career insights" },
                   ].map((imp, j) => (
                     <div key={j} className="flex items-center gap-2 text-sm">
                       <imp.icon className="h-4 w-4 text-primary shrink-0" />
@@ -88,20 +86,35 @@ const ProjectsSection = () => (
                 </div>
               </div>
 
+              <div className="glass rounded-lg p-4 border-primary/20">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">💼 Business Value</p>
+                <ul className="text-sm text-foreground/80 space-y-1">
+                  {[
+                    "Bridges the gap between raw data and career decision-making using AI",
+                    "Enables data-driven decision-making for students",
+                  ].map((a, j) => (
+                    <li key={j} className="flex items-start gap-2">
+                      <Briefcase className="h-3.5 w-3.5 text-primary mt-0.5 shrink-0" />
+                      {a}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <div className="flex flex-wrap gap-2">
-                {["Python", "Pandas", "NumPy", "Scikit-learn", "SQL (SQLite)", "Power BI", "Excel", "Streamlit", "SHAP", "Git"].map((tool) => (
+                {["Python", "Pandas", "NumPy", "Scikit-learn", "SQL", "Power BI", "Excel", "Streamlit", "SHAP"].map((tool) => (
                   <Badge key={tool} variant="outline" className="text-xs border-primary/30 text-primary">{tool}</Badge>
                 ))}
               </div>
 
               <div className="flex flex-wrap gap-3 pt-2">
                 <Button asChild size="sm" className="bg-gradient-accent text-primary-foreground">
-                  <a href="https://lnkd.in/gUhK5QyU" target="_blank" rel="noopener noreferrer">
+                  <a href="https://college-placement-predictor.streamlit.app/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" /> Live App
                   </a>
                 </Button>
                 <Button asChild size="sm" variant="outline">
-                  <a href="https://lnkd.in/ge87FWyC" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/Paravejalam/College-Placement-Predictor" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" /> GitHub
                   </a>
                 </Button>
@@ -126,18 +139,18 @@ const ProjectsSection = () => (
 
               <div>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">🔍 Problem</p>
-                <p className="text-sm text-muted-foreground">Businesses often lack clarity on sales performance, revenue drivers, and regional trends due to static and fragmented reports.</p>
+                <p className="text-sm text-muted-foreground">Businesses struggle to analyze sales performance due to static and fragmented reports.</p>
               </div>
 
               <div>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">⚙️ Approach</p>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   {[
-                    "Cleaned and transformed sales data using Power Query",
-                    "Built relational data model (Fact & Dimension Tables)",
-                    "Created KPIs (Revenue, Orders, AOV, Growth Rate) using DAX",
-                    "Designed interactive Power BI dashboard",
-                    "Integrated dashboard into a modern web interface",
+                    "Data cleaning using Power Query",
+                    "Data modeling (Fact & Dimension Tables)",
+                    "KPI creation using DAX (Revenue, Orders, AOV, Growth)",
+                    "Interactive Power BI dashboard",
+                    "Integrated with web interface",
                     "Deployed using Vercel",
                   ].map((a, j) => (
                     <li key={j} className="flex items-start gap-2">
@@ -152,8 +165,8 @@ const ProjectsSection = () => (
                 <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-2">🤖 AI Angle</p>
                 <ul className="text-sm text-foreground/80 space-y-1">
                   {[
-                    "Used AI tools to identify key KPIs and improve dashboard storytelling",
-                    "Generated insights faster using AI-assisted analytics",
+                    "Used AI tools for KPI identification and insight generation",
+                    "Enhanced dashboard storytelling",
                   ].map((a, j) => (
                     <li key={j} className="flex items-start gap-2">
                       <Sparkles className="h-3.5 w-3.5 text-accent mt-0.5 shrink-0" />
@@ -167,10 +180,9 @@ const ProjectsSection = () => (
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">📈 Impact</p>
                 <div className="space-y-2">
                   {[
-                    { icon: Layers, text: "Analyzed large-scale sales dataset (10,000+ records)" },
-                    { icon: TrendingUp, text: "Identified top-performing regions, products, and revenue contributors" },
-                    { icon: Zap, text: "Enabled business users to explore insights interactively" },
-                    { icon: Clock, text: "Improved reporting efficiency and decision-making speed" },
+                    { icon: Layers, text: "Analyzed 10,000+ rows of sales data" },
+                    { icon: TrendingUp, text: "Identified top-performing products and regions" },
+                    { icon: Clock, text: "Improved reporting efficiency" },
                   ].map((imp, j) => (
                     <div key={j} className="flex items-center gap-2 text-sm">
                       <imp.icon className="h-4 w-4 text-primary shrink-0" />
@@ -180,15 +192,29 @@ const ProjectsSection = () => (
                 </div>
               </div>
 
+              <div className="glass rounded-lg p-4 border-primary/20">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">💼 Business Value</p>
+                <ul className="text-sm text-foreground/80 space-y-1">
+                  {[
+                    "Helps stakeholders make faster data-driven decisions",
+                    "Designed for non-technical users to explore insights without SQL knowledge",
+                  ].map((a, j) => (
+                    <li key={j} className="flex items-start gap-2">
+                      <Briefcase className="h-3.5 w-3.5 text-primary mt-0.5 shrink-0" />
+                      {a}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <div>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">📊 Key Features</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {[
-                    "KPI-driven navigation (click → insights section)",
-                    "Region-wise and city-level analysis",
+                    "KPI-driven navigation",
+                    "Region & city-level insights",
                     "Store performance comparison",
-                    "Trend analysis (Revenue, Orders, Growth)",
-                    "Business-focused storytelling",
+                    "Trend analysis",
                   ].map((f, j) => (
                     <div key={j} className="flex items-start gap-2 text-sm text-foreground/80">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
@@ -202,6 +228,19 @@ const ProjectsSection = () => (
                 {["Power BI", "DAX", "Power Query", "Data Modeling", "Vercel", "AI Tools"].map((tool) => (
                   <Badge key={tool} variant="outline" className="text-xs border-primary/30 text-primary">{tool}</Badge>
                 ))}
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button asChild size="sm" className="bg-gradient-accent text-primary-foreground">
+                  <a href="https://v0-sales-performance-dashboard-ochre.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="h-4 w-4" /> Live Dashboard
+                  </a>
+                </Button>
+                <Button asChild size="sm" variant="outline">
+                  <a href="https://github.com/Paravejalam/v0-sales-performance-dashboard" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="h-4 w-4" /> GitHub
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -256,7 +295,6 @@ const ProjectsSection = () => (
               </div>
             </div>
 
-            {/* What Makes Me Different */}
             <div className="glass rounded-2xl p-6 md:p-8 bg-gradient-to-br from-primary/10 to-accent/10 text-center">
               <Award className="h-8 w-8 text-primary mx-auto mb-3" />
               <h4 className="text-lg font-bold mb-4">🎯 What Makes Me Different</h4>

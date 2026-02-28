@@ -34,7 +34,7 @@ const ContactSection = () => (
             </a>
 
             <a
-              href="https://github.com/paravejaalam"
+              href="https://github.com/Paravejalam/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 glass rounded-xl p-4 hover:scale-[1.02] transition-transform duration-300"
