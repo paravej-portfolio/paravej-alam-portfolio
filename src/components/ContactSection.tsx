@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, ExternalLink, Download } from "lucide-react";
+import { Mail, Linkedin, Github, ExternalLink, Download, Handshake } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionHeading from "./SectionHeading";
 import { Button } from "@/components/ui/button";
@@ -14,7 +14,7 @@ const ContactSection = () => (
   <section id="contact" className="py-16 md:py-28">
     <div className="container mx-auto px-4">
       <AnimatedSection>
-        <SectionHeading title="Let's Connect" subtitle="I'm actively seeking opportunities in Data Analytics & AI" />
+        <SectionHeading title="Let's Connect" subtitle="Ready to collaborate on your next data or AI project" />
       </AnimatedSection>
 
       <AnimatedSection delay={200}>
@@ -35,12 +35,24 @@ const ContactSection = () => (
             ))}
           </div>
 
-          <Button size="lg" className="bg-gradient-accent text-primary-foreground btn-premium" asChild>
-            <a href="mailto:parvejalamsiddiqui1436@gmail.com">
-              <Mail className="h-5 w-5" />
-              Get in Touch
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button size="lg" className="bg-gradient-accent text-primary-foreground btn-premium" asChild>
+              <a href="mailto:parvejalamsiddiqui1436@gmail.com">
+                <Mail className="h-5 w-5" />
+                Get in Touch
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-accent to-cyan text-primary-foreground btn-premium animate-pulse-glow"
+              asChild
+            >
+              <a href="mailto:parvejalamsiddiqui1436@gmail.com?subject=Project%20Inquiry">
+                <Handshake className="h-5 w-5" />
+                Hire Me
+              </a>
+            </Button>
+          </div>
         </div>
       </AnimatedSection>
 
