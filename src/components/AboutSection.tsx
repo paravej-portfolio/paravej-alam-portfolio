@@ -24,7 +24,7 @@ const steps = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="py-20 md:py-28">
+  <section id="about" className="py-16 md:py-28">
     <div className="container mx-auto px-4">
       <AnimatedSection>
         <SectionHeading title="My Journey" subtitle="From mathematics to AI-powered analytics" />
