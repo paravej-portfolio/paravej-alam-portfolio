@@ -53,8 +53,8 @@ const HeroSection = () => {
 
         {/* Main Heading with spotlight glow */}
         <div className="relative inline-block mb-3">
-          <div className="absolute inset-0 -inset-x-10 md:-inset-x-20 -inset-y-5 md:-inset-y-10 bg-primary/[0.08] blur-[60px] md:blur-[80px] rounded-full" />
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold relative leading-tight">
+          <div className="absolute -inset-x-4 -inset-y-2 md:-inset-x-20 md:-inset-y-10 bg-primary/[0.08] blur-[30px] md:blur-[80px] rounded-full" />
+          <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold relative leading-tight max-w-[90vw] md:max-w-none">
             Hi, I'm{" "}
             <span className="text-gradient-animated">Paravej Alam</span>
           </h1>
