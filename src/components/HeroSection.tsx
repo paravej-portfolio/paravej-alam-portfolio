@@ -44,29 +44,29 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-accent/[0.12] blur-[130px]" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-cyan/[0.06] blur-[100px]" />
 
-      <div className="container mx-auto px-4 relative z-10 text-center py-20">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 text-sm text-muted-foreground gradient-border">
+      <div className="container mx-auto px-4 relative z-10 text-center flex flex-col items-center py-20">
+        {/* Badge — top of hero */}
+        <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-4 text-sm text-muted-foreground gradient-border">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           Open to opportunities
         </div>
 
-        {/* Spotlight glow behind name */}
-        <div className="relative inline-block">
+        {/* Main Heading with spotlight glow */}
+        <div className="relative inline-block mb-3">
           <div className="absolute inset-0 -inset-x-20 -inset-y-10 bg-primary/[0.08] blur-[80px] rounded-full" />
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 relative">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold relative">
             Hi, I'm{" "}
             <span className="text-gradient-animated">Paravej Alam</span>
           </h1>
         </div>
 
-        {/* Tagline */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-2 max-w-3xl mx-auto">
+        {/* Subheading */}
+        <p className="text-xl md:text-2xl text-muted-foreground mb-3 max-w-3xl">
           From Raw Data to Intelligent Decisions — Powered by Analytics & AI
         </p>
 
         {/* Typing effect */}
-        <div className="h-10 flex items-center justify-center mb-4">
+        <div className="h-10 flex items-center justify-center mb-3">
           <p className="text-lg md:text-xl text-foreground/80">
             Transforming business data into actionable insights using{" "}
             <span className="text-primary font-semibold">{text}</span>
@@ -74,23 +74,13 @@ const HeroSection = () => {
           </p>
         </div>
 
-        {/* Proof line */}
-        <p className="text-muted-foreground text-base mb-8 max-w-2xl mx-auto">
+        {/* Description */}
+        <p className="text-muted-foreground text-base mb-5 max-w-2xl">
           Built dashboards, analyzed datasets, and applied AI to accelerate insights.
         </p>
 
-        {/* Info badges */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm text-muted-foreground">
-          <span className="flex items-center gap-1.5 glass rounded-full px-3 py-1.5 gradient-border">
-            <MapPin className="h-4 w-4 text-primary" /> Gorakhpur, UP, India
-          </span>
-          <span className="flex items-center gap-1.5 glass rounded-full px-3 py-1.5 gradient-border">
-            <GraduationCap className="h-4 w-4 text-primary" /> MCA, MMMUT (2024–2026)
-          </span>
-        </div>
-
-        {/* CTAs */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+        {/* CTA Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
           <Button size="lg" className="bg-gradient-accent text-primary-foreground animate-pulse-glow" asChild>
             <a href="#projects">
               <FolderOpen className="h-5 w-5" />
@@ -103,6 +93,16 @@ const HeroSection = () => {
               Download Resume
             </a>
           </Button>
+        </div>
+
+        {/* Info badges */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1.5 glass rounded-full px-3 py-1.5 gradient-border">
+            <MapPin className="h-4 w-4 text-primary" /> Gorakhpur, UP, India
+          </span>
+          <span className="flex items-center gap-1.5 glass rounded-full px-3 py-1.5 gradient-border">
+            <GraduationCap className="h-4 w-4 text-primary" /> MCA, MMMUT (2024–2026)
+          </span>
         </div>
 
         {/* Scroll indicator */}
