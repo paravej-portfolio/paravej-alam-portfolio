@@ -26,7 +26,7 @@ const neuralLines: [[number, number], [number, number]][] = [
 ];
 
 const BackgroundEffects = () => (
-  <div className="absolute inset-x-0 top-0 h-[90vh] sm:h-[110vh] md:inset-0 md:h-auto pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+  <div className="relative h-full w-full pointer-events-none z-0 overflow-hidden" aria-hidden="true">
     {/* Subtle grid pattern */}
     <div className="absolute inset-0 grid-pattern opacity-30" />
 
