@@ -44,7 +44,7 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 -right-40 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full bg-accent/[0.12] blur-[70px] md:blur-[130px] z-0" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-full bg-cyan/[0.06] blur-[50px] md:blur-[100px] z-0" />
 
-      <div className="container mx-auto px-5 md:px-4 relative z-10 text-center flex flex-col items-center py-16 md:py-20">
+      <div className="container mx-auto px-5 md:px-4 relative z-20 text-center flex flex-col items-center py-16 md:py-20">
         {/* Badge — top of hero */}
         <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mt-4 mb-4 text-xs sm:text-sm text-muted-foreground gradient-border">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
