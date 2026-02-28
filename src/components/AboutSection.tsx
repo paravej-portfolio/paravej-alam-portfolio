@@ -34,9 +34,8 @@ const AboutSection = () => (
         {steps.map((step, i) => (
           <AnimatedSection key={i} delay={i * 150}>
             <div className="flex gap-4 md:gap-6 mb-10 last:mb-0 group">
-              {/* Timeline line */}
               <div className="flex flex-col items-center">
-                <div className={`w-12 h-12 rounded-xl glass gradient-border flex items-center justify-center ${step.color} shrink-0 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-300`}>
+                <div className={`w-12 h-12 rounded-xl glass-card gradient-border flex items-center justify-center ${step.color} shrink-0 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-300`}>
                   <step.icon className="h-6 w-6" />
                 </div>
                 {i < steps.length - 1 && (

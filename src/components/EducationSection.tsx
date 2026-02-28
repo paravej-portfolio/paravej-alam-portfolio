@@ -37,12 +37,11 @@ const EducationSection = () => (
       <div className="max-w-3xl mx-auto space-y-8">
         {education.map((edu, i) => (
           <AnimatedSection key={i} delay={i * 200}>
-            <div className="glass rounded-2xl p-6 md:p-8 hover:scale-[1.02] transition-all duration-300 relative overflow-hidden gradient-border group hover:shadow-lg hover:shadow-primary/10">
-              {/* Accent line */}
+            <div className="glass-card rounded-2xl p-6 md:p-8 card-hover relative overflow-hidden gradient-border group">
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-accent rounded-l-2xl" />
 
               <div className="flex items-start gap-4">
-                <div className="shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                   <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -66,9 +65,8 @@ const EducationSection = () => (
           </AnimatedSection>
         ))}
 
-        {/* Academic Focus */}
         <AnimatedSection delay={400}>
-          <div className="glass rounded-2xl p-6 text-center gradient-border bg-gradient-to-br from-primary/[0.05] to-accent/[0.05]">
+          <div className="glass-card rounded-2xl p-6 text-center gradient-border bg-gradient-subtle">
             <Lightbulb className="h-6 w-6 text-primary mx-auto mb-3" />
             <p className="text-sm md:text-base text-foreground/90 font-medium mb-4">
               Applying mathematical thinking + modern tools to solve real-world data problems.

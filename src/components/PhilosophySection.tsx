@@ -30,8 +30,8 @@ const PhilosophySection = () => (
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
         {cards.map((card, i) => (
           <AnimatedSection key={i} delay={i * 150}>
-            <div className="glass rounded-2xl p-8 text-center gradient-border hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group">
-              <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center mx-auto mb-5 text-primary-foreground shadow-lg group-hover:shadow-primary/30 transition-shadow">
+            <div className="glass-card rounded-2xl p-8 text-center gradient-border card-hover group h-full">
+              <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center mx-auto mb-5 text-primary-foreground shadow-lg group-hover:shadow-primary/30 transition-shadow duration-300">
                 <card.icon className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold mb-3">{card.title}</h3>
@@ -48,7 +48,7 @@ const PhilosophySection = () => (
       </AnimatedSection>
 
       <AnimatedSection delay={600}>
-        <div className="flex items-center justify-center gap-3 mt-8 glass rounded-xl px-6 py-4 max-w-lg mx-auto gradient-border">
+        <div className="flex items-center justify-center gap-3 mt-8 glass-card rounded-xl px-6 py-4 max-w-lg mx-auto gradient-border">
           <Rocket className="h-5 w-5 text-primary shrink-0" />
           <p className="text-sm font-medium">
             My goal: Combine <span className="text-primary">Skill</span>, <span className="text-accent">Thinking</span>, and <span className="text-primary">Impact</span> to build intelligent, AI-powered analytics solutions.

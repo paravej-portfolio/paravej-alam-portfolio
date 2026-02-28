@@ -56,16 +56,14 @@ const CertificationsSection = () => (
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {certifications.map((cert, i) => (
           <AnimatedSection key={i} delay={i * 150}>
-            <div className="glass rounded-2xl p-6 h-full flex flex-col hover:scale-[1.03] hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group">
-              {/* Icon badge */}
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 shadow-lg group-hover:shadow-primary/30 transition-shadow">
+            <div className="glass-card rounded-2xl p-6 h-full flex flex-col card-hover group gradient-border">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 shadow-lg group-hover:shadow-primary/30 transition-shadow duration-300">
                 <cert.icon className="h-6 w-6 text-primary-foreground" />
               </div>
 
               <h3 className="font-bold text-lg mb-1">{cert.title}</h3>
               <p className="text-sm text-muted-foreground mb-3">{cert.subtitle}</p>
 
-              {/* Meta */}
               <div className="flex flex-wrap gap-2 text-xs text-muted-foreground mb-4">
                 <span className="flex items-center gap-1">📅 {cert.date}</span>
                 {cert.instructor && (
@@ -73,7 +71,6 @@ const CertificationsSection = () => (
                 )}
               </div>
 
-              {/* Highlights */}
               <ul className="space-y-1.5 mb-4 flex-1">
                 {cert.highlights.map((h, j) => (
                   <li key={j} className="text-sm text-muted-foreground flex items-start gap-2">
@@ -83,7 +80,6 @@ const CertificationsSection = () => (
                 ))}
               </ul>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-1.5 mb-4">
                 {cert.tags.map((tag) => (
                   <Badge key={tag} variant="secondary" className="text-[10px]">
@@ -92,7 +88,6 @@ const CertificationsSection = () => (
                 ))}
               </div>
 
-              {/* CTA */}
               {cert.link && (
                 <Button variant="outline" size="sm" className="w-full border-primary/30 hover:bg-primary/10" asChild>
                   <a href={cert.link} target="_blank" rel="noopener noreferrer">

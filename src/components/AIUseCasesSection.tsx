@@ -21,8 +21,8 @@ const AIUseCasesSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-12">
         {useCases.map((uc, i) => (
           <AnimatedSection key={i} delay={i * 100}>
-            <div className="glass rounded-xl p-5 flex items-start gap-4 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+            <div className="glass-card rounded-xl p-5 flex items-start gap-4 gradient-border card-hover group">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
                 <uc.icon className="h-5 w-5 text-primary" />
               </div>
               <p className="text-sm text-foreground/90 leading-relaxed">{uc.label}</p>
@@ -31,9 +31,8 @@ const AIUseCasesSection = () => (
         ))}
       </div>
 
-      {/* Real example callout */}
       <AnimatedSection delay={600}>
-        <div className="max-w-3xl mx-auto glass rounded-2xl p-8 gradient-border glow-primary mb-10">
+        <div className="max-w-3xl mx-auto glass-card rounded-2xl p-8 gradient-border glow-soft mb-10">
           <div className="flex items-start gap-4">
             <Quote className="h-8 w-8 text-primary shrink-0 mt-1" />
             <div>
@@ -46,7 +45,6 @@ const AIUseCasesSection = () => (
         </div>
       </AnimatedSection>
 
-      {/* Vision */}
       <AnimatedSection delay={700}>
         <div className="flex items-center justify-center gap-3 text-center">
           <Lightbulb className="h-5 w-5 text-accent" />
