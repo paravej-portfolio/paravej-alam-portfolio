@@ -146,6 +146,7 @@ export default {
         "gradient-shift": "gradient-shift 4s ease-in-out infinite",
         blink: "blink 1s step-end infinite",
         "orb-rotate": "orb-rotate 20s linear infinite",
+        drift: "drift 25s ease-in-out infinite",
       },
     },
   },
