@@ -15,7 +15,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 import SectionDivider from "@/components/SectionDivider";
 
 const Index = () => (
-  <div className="min-h-screen bg-background text-foreground noise-overlay">
+  <div className="relative min-h-screen bg-background text-foreground noise-overlay" style={{ zIndex: 1 }}>
     <ScrollProgress />
     <BackgroundEffects />
     <Navbar />
