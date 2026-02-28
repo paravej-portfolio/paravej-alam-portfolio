@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const ProjectsSection = () => (
-  <section id="projects" className="py-20 md:py-28">
+  <section id="projects" className="py-16 md:py-28">
     <div className="container mx-auto px-4">
       <AnimatedSection>
         <SectionHeading title="Featured Projects" subtitle="Data Analytics + AI in Action" />
@@ -24,7 +24,7 @@ const ProjectsSection = () => (
               </div>
             </div>
 
-            <div className="p-6 md:p-8 space-y-5">
+              <div className="p-4 sm:p-6 md:p-8 space-y-5">
               <h3 className="text-xl md:text-2xl font-bold">College Placement Predictor & Resume Insights Dashboard</h3>
 
               <div>
@@ -133,7 +133,7 @@ const ProjectsSection = () => (
               </div>
             </div>
 
-            <div className="p-6 md:p-8 space-y-5">
+            <div className="p-4 sm:p-6 md:p-8 space-y-5">
               <h3 className="text-xl md:text-2xl font-bold">Sales Performance Analytics Dashboard</h3>
 
               <div>
@@ -249,7 +249,7 @@ const ProjectsSection = () => (
         <AnimatedSection delay={400}>
           <div className="space-y-6">
             <h3 className="text-xl md:text-2xl font-bold text-center text-gradient-animated">Learning & Certifications</h3>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div className="glass rounded-2xl p-6 gradient-border hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">

@@ -24,7 +24,7 @@ const steps = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="py-20 md:py-28">
+  <section id="about" className="py-16 md:py-28">
     <div className="container mx-auto px-4">
       <AnimatedSection>
         <SectionHeading title="My Journey" subtitle="From mathematics to AI-powered analytics" />
@@ -33,7 +33,7 @@ const AboutSection = () => (
       <div className="max-w-4xl mx-auto">
         {steps.map((step, i) => (
           <AnimatedSection key={i} delay={i * 150}>
-            <div className="flex gap-6 mb-10 last:mb-0 group">
+            <div className="flex gap-4 md:gap-6 mb-10 last:mb-0 group">
               {/* Timeline line */}
               <div className="flex flex-col items-center">
                 <div className={`w-12 h-12 rounded-xl glass gradient-border flex items-center justify-center ${step.color} shrink-0 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-300`}>
@@ -45,7 +45,7 @@ const AboutSection = () => (
               </div>
               <div className="pb-8">
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{step.desc}</p>
               </div>
             </div>
           </AnimatedSection>

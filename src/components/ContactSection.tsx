@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => (
-  <section id="contact" className="py-20 md:py-28">
+  <section id="contact" className="py-16 md:py-28">
     <div className="container mx-auto px-4">
       <AnimatedSection>
         <SectionHeading title="Let's Connect" subtitle="I'm actively seeking opportunities in Data Analytics & AI" />
