@@ -21,6 +21,7 @@ const Index = () => (
     <AIUseCasesSection />
     <ProjectsSection />
     <SkillsSection />
+    <CertificationsSection />
     <WhyMeSection />
     <ExtrasSection />
     <ContactSection />
