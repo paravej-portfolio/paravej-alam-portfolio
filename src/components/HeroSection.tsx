@@ -61,7 +61,7 @@ const HeroSection = () => {
         </div>
 
         {/* Subheading */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-3 max-w-3xl">
+        <p className="text-xl md:text-2xl text-foreground/70 mb-3 max-w-3xl" style={{ textShadow: "0 0 30px hsl(var(--primary) / 0.15)" }}>
           From Raw Data to Intelligent Decisions — Powered by Analytics & AI
         </p>
 
@@ -87,7 +87,7 @@ const HeroSection = () => {
               View Projects
             </a>
           </Button>
-          <Button size="lg" variant="outline" className="border-primary/40 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300" asChild>
+          <Button size="lg" variant="outline" className="border-primary/40 hover:bg-primary/10 hover:border-primary/60 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.4)] transition-all duration-300" asChild>
             <a href="/resume.pdf" download>
               <Download className="h-5 w-5" />
               Download Resume
