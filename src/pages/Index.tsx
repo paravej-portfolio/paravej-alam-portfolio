@@ -6,6 +6,7 @@ import PhilosophySection from "@/components/PhilosophySection";
 import AIUseCasesSection from "@/components/AIUseCasesSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
+import CertificationsSection from "@/components/CertificationsSection";
 import WhyMeSection from "@/components/WhyMeSection";
 import ExtrasSection from "@/components/ExtrasSection";
 import ContactSection from "@/components/ContactSection";
