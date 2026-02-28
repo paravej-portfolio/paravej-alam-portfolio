@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, ExternalLink } from "lucide-react";
+import { Mail, Linkedin, Github, ExternalLink, Download } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionHeading from "./SectionHeading";
 import { Button } from "@/components/ui/button";

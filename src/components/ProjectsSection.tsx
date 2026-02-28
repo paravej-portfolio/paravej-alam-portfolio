@@ -55,9 +55,9 @@ const projects = [
     ],
     aiAngle: "Used AI for query optimization and logic improvement.",
     impact: [
-      { icon: Zap, text: "Faster querying on 50K+ rows" },
-      { icon: Layers, text: "Better data understanding" },
-      { icon: TrendingUp, text: "Improved decision support" },
+      { icon: Zap, text: "Queried 50,000+ rows efficiently" },
+      { icon: Layers, text: "Identified 3 key business trends" },
+      { icon: TrendingUp, text: "Improved decision support turnaround" },
     ],
     tools: ["SQL", "Python", "Pandas", "AI Tools"],
     gradient: "from-primary/20 to-accent/5",
