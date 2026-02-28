@@ -24,7 +24,7 @@ const ProjectsSection = () => (
               </div>
             </div>
 
-            <div className="p-6 md:p-8 space-y-5">
+              <div className="p-4 sm:p-6 md:p-8 space-y-5">
               <h3 className="text-xl md:text-2xl font-bold">College Placement Predictor & Resume Insights Dashboard</h3>
 
               <div>
