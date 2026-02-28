@@ -125,6 +125,12 @@ export default {
           "0%": { transform: "rotate(0deg) translateX(100px) rotate(0deg)" },
           "100%": { transform: "rotate(360deg) translateX(100px) rotate(-360deg)" },
         },
+        drift: {
+          "0%": { transform: "translate(0, 0) scale(1)" },
+          "33%": { transform: "translate(15px, -10px) scale(1.02)" },
+          "66%": { transform: "translate(-10px, 8px) scale(0.98)" },
+          "100%": { transform: "translate(0, 0) scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
