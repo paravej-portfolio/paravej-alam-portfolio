@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, ExternalLink } from "lucide-react";
+import { Mail, Linkedin, Github, ExternalLink, Download } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import SectionHeading from "./SectionHeading";
 import { Button } from "@/components/ui/button";
@@ -23,7 +23,7 @@ const ContactSection = () => (
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/paravejaalam"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 glass rounded-xl p-4 hover:scale-[1.02] transition-transform duration-300"
@@ -34,13 +34,23 @@ const ContactSection = () => (
             </a>
 
             <a
-              href="https://github.com"
+              href="https://github.com/paravejaalam"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 glass rounded-xl p-4 hover:scale-[1.02] transition-transform duration-300"
             >
               <Github className="h-5 w-5 text-primary" />
               <span className="text-sm text-foreground">GitHub Projects</span>
+              <ExternalLink className="h-4 w-4 text-muted-foreground ml-auto" />
+            </a>
+
+            <a
+              href="/resume.pdf"
+              download
+              className="flex items-center gap-3 glass rounded-xl p-4 hover:scale-[1.02] transition-transform duration-300"
+            >
+              <Download className="h-5 w-5 text-primary" />
+              <span className="text-sm text-foreground">Download Resume (PDF)</span>
               <ExternalLink className="h-4 w-4 text-muted-foreground ml-auto" />
             </a>
           </div>
