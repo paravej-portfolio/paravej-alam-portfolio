@@ -13,7 +13,15 @@ const roles = [
   "Python",
   "Machine Learning",
   "AI Systems",
-  "LLM",
+  "Data Analyst",
+  "Business Intelligence",
+  "Data Visualization",
+  "Data Science",
+  "AI Engineer",
+  "LLM Engineer",
+  "AI Engineer",
+  "LLM Engineer",
+  "Business Analyst",
 ];
 
 const HeroSection = () => {
